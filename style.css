@@ -5,14 +5,18 @@
 body{
     font-family: 'Mukta', sans-serif;
     text-align: justify;
+    box-sizing: border-box;
 }
 .welcome-part{
     background-image: url(images/top-banner.png);
     background-repeat: no-repeat;
-    display: flex;
 }
-.world{
-    width: 50%;
+.navication{
+     margin: 0px 80px 100px 80px;
+     display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
 }
 .first-heding{
     font-size: 50px;
@@ -45,40 +49,55 @@ body{
     display: inline-block;
     color: white;
 }
-.world img{
+.world-1 img{
     margin-left: 50px;
-    width: 60%;
-    margin-top: 50px;
-    color: white;
-    
+     margin-top: 50px;
+    width: 500px;
+}
+   
+.dream-pic img{
+    width: 500px;
+    margin-left: 20px;
 }
 h2{
     font-size: 40px;
     margin-left: 40px;
     margin-top: 10px;
-}.dream-part{
+}
+.dream-part{
     background-image: url(images/dream-bg.png);
     background-repeat: no-repeat;
     background-position: right;
-    display: flex;
+    margin-top: 50px;
+    
+}
+.dreams{
+    margin: 0px 100px 100px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
 }
 .experiences-heder{
-    
+    text-align: center;
     font-size: 40px;
     margin-top: 20px;
     margin-left: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 .expreiences-items{
-    display: flex; 
     background-image: url(images/exp-bg.png);
     background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    /* align-items: center; */
 }
 .miden{
     font-size: 40px;
 }
 .expreience-ber{
-    width: 40%;
+    width: 80%;
     margin-left: 40px;
     box-shadow: 10px 10px 40px gray;
     padding: 40px;
@@ -101,4 +120,61 @@ h2{
 footer{
     margin-top: 10%;
     text-align: center;
+}
+
+@media only screen and (max-width:667px){
+    .navication{
+        margin: 0px 5px 5px 5px;
+       grid-template-columns: repeat(1,1fr);
+       padding: 5px;
+    }
+    .first-heding, .secend-heding{
+        font-size: 30px;
+
+    }
+    .dream-part{
+        background-size: 0px;
+    }
+    .baton{
+        padding: 5px 10px;
+    }
+    .world-1{
+        order: -1;
+    }
+    .world h3{
+        font-size: 10px;
+    }
+    .world-1 img{
+        margin-left: 20px;
+        width: 280px;
+        margin-top: 50px;
+    }
+    .dream-pic img{
+        width: 280px;
+        margin-left: 10px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .dreams{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0px 5px 5px 5px;
+    }
+    .experiences-heder{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .expreiences-items{
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 40px;
+        margin: 0px 0px 5px 5px;
+    }
+    .expreience-ber{
+        margin-left: 10px;
+        padding: 20px;
+        width: 70%;
+    }
+    .miden{
+        font-size: 30px;
+    }
 }
